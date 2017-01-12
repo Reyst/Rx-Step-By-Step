@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "495515736048",
+    "firebase_url": "https://rxstepbystep.firebaseio.com",
+    "project_id": "rxstepbystep",
+    "storage_bucket": "rxstepbystep.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495515736048:android:c907b9cb87c253b9",
+        "android_client_info": {
+          "package_name": "gsi.reyst.rx.step.by.step"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495515736048-ut8q9kudcgu32m1o4hj653acao714bpp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gsi.reyst.rx.step.by.step",
+            "certificate_hash": "C0F38C14DA7BB8B7E93F4457414CB7E711FFB0E5"
+          }
+        },
+        {
+          "client_id": "495515736048-4olocbe7pakofacm3knorauqlslj7l3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAULRKu27kXSbPa21PDCWayeqJygD8cQKs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495515736048-4olocbe7pakofacm3knorauqlslj7l3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

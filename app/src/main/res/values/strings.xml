@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">"Rx Step By Step "</string>
+    <string name="str_find">Find</string>
+    <string name="empty_repo_list">List is empty</string>
+    <string name="str_branches">Branches</string>
+    <string name="str_contributors">Contributors</string>
+</resources>
