@@ -1,9 +1,12 @@
 package gsi.reyst.rx.step.by.step.mappers;
 
+import android.content.Context;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -13,6 +16,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 import gsi.reyst.rx.step.by.step.BuildConfig;
+import gsi.reyst.rx.step.by.step.DI.ComponentHolder;
+import gsi.reyst.rx.step.by.step.DI.TestComponentHolder;
+import gsi.reyst.rx.step.by.step.DI.components.TestAppComponent;
 import gsi.reyst.rx.step.by.step.TestUtils;
 import gsi.reyst.rx.step.by.step.model.DTO.RepositoryDTO;
 
@@ -42,6 +48,11 @@ public class MappersTest {
 
     @Before
     public void setUp() throws Exception {
+
+        Context context = Mockito.mock(Context.class);
+        TestComponentHolder.create(context);
+
+        ((TestAppComponent)TestComponentHolder.getInstance().getAppComponent()).inject(this);
 
         RepositoryDTO[] repositoryDTOArray = mTestUtils.getGson().fromJson(mTestUtils.readString("json/repos.json"), RepositoryDTO[].class);
         mRepoDTOList = Arrays.asList(repositoryDTOArray);

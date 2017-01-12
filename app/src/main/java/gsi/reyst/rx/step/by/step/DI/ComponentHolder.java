@@ -26,8 +26,13 @@ public class ComponentHolder {
     }
 
     public static void create(Context context) {
-        new ComponentHolder(context);
+        sInstance = new ComponentHolder(context);
     }
+
+    public static void create(ComponentHolder holder) {
+        sInstance = holder;
+    }
+
 
     protected ComponentHolder(Context context) {
         mAppComponent = DaggerAppComponent.builder()
