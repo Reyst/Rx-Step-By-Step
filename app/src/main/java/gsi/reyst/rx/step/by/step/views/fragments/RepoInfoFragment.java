@@ -63,18 +63,15 @@ public class RepoInfoFragment extends BaseFragment implements RepoInfoView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.repo_info_fragment, container, false);
-//        mContext = inflater.getContext();
 
         RecyclerView rvBranches = (RecyclerView) view.findViewById(R.id.rv_branches);
         LinearLayoutManager llm1 = new LinearLayoutManager(mContext);
         rvBranches.setLayoutManager(llm1);
-//        mBranchesAdapter = new BranchesAdapter();
         rvBranches.setAdapter(mBranchesAdapter);
 
         RecyclerView rvContributors = (RecyclerView) view.findViewById(R.id.rv_contributors);
         LinearLayoutManager llm2 = new LinearLayoutManager(mContext);
         rvContributors.setLayoutManager(llm2);
-//        mContributorAdapter = new ContributorsAdapter();
         rvContributors.setAdapter(mContributorAdapter);
 
         mPresenter.onCreate(savedInstanceState);

@@ -1,35 +1,28 @@
 package gsi.reyst.rx.step.by.step.DI.modules;
 
+import android.app.Application;
 import android.content.Context;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import gsi.reyst.rx.step.by.step.DI.ComponentHolder;
 
 @Module
 public class AppModule {
 
     private Context mContext;
-    private ComponentHolder mComponentHolder;
+    private Application mApplication;
 
-    public AppModule(Context context, ComponentHolder holder) {
-        mContext = context;
-        mComponentHolder = holder;
+    public AppModule(Application application) {
+        mContext = application.getApplicationContext();
+        mApplication = application;
     }
 
     @Provides
     @Singleton
-    public Context getContext() {
+    public Context provideContext() {
         return mContext;
     }
-
-    @Provides
-    @Singleton
-    public ComponentHolder getComponentHolder() {
-        return mComponentHolder;
-    }
-
 
 }

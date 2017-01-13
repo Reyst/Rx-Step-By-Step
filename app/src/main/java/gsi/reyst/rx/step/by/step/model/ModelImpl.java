@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import gsi.reyst.rx.step.by.step.ApiInterface;
+import gsi.reyst.rx.step.by.step.rest.ApiInterface;
 import gsi.reyst.rx.step.by.step.DI.ComponentHolder;
 import gsi.reyst.rx.step.by.step.model.DTO.BranchDTO;
 import gsi.reyst.rx.step.by.step.model.DTO.ContributorDTO;

@@ -1,7 +1,9 @@
 package gsi.reyst.rx.step.by.step.DI;
 
+import android.app.Application;
 import android.content.Context;
 
+import gsi.reyst.rx.step.by.step.App;
 import gsi.reyst.rx.step.by.step.DI.components.AppComponent;
 import gsi.reyst.rx.step.by.step.DI.components.DaggerAppComponent;
 import gsi.reyst.rx.step.by.step.DI.components.RepoInfoComponent;
@@ -19,24 +21,24 @@ public class ComponentHolder {
 
     private static ComponentHolder sInstance;
 
-    protected AppComponent mAppComponent;
+    private AppComponent mAppComponent;
 
     public static ComponentHolder getInstance() {
+        if (sInstance == null) {
+            sInstance = new ComponentHolder();
+        }
         return sInstance;
     }
 
-    public static void create(Context context) {
-        sInstance = new ComponentHolder(context);
+    protected ComponentHolder() {
     }
 
-    public static void create(ComponentHolder holder) {
-        sInstance = holder;
-    }
+    public void initComponentHolder(Application application) {
 
+        assert mAppComponent == null;
 
-    protected ComponentHolder(Context context) {
         mAppComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule(context, this))
+                .appModule(new AppModule(application))
                 .mappersModule(new MappersModule())
                 .modelModule(new ModelModule())
                 .build();

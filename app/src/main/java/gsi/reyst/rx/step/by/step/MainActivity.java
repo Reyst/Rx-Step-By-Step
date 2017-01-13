@@ -4,7 +4,6 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import gsi.reyst.rx.step.by.step.DI.ComponentHolder;
 import gsi.reyst.rx.step.by.step.views.fragments.BaseFragment;
 import gsi.reyst.rx.step.by.step.views.fragments.RepoInfoFragment;
 import gsi.reyst.rx.step.by.step.views.fragments.RepoListFragment;
@@ -15,8 +14,6 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        ComponentHolder.create(getApplicationContext());
 
         if (getFragmentManager().findFragmentById(R.id.activity_main) == null) {
             try {
@@ -51,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
     public void changeFragment(BaseFragment newFragment, boolean saveHistory) {
         FragmentTransaction tx = getFragmentManager().beginTransaction();
         tx.replace(R.id.activity_main, newFragment);
-        if (saveHistory) tx.addToBackStack(null); // newFragment.getClass().getName()
+        if (saveHistory) tx.addToBackStack(null);
         tx.commit();
     }
 }

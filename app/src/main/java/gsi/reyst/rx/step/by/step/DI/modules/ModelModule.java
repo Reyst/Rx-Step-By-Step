@@ -10,7 +10,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import gsi.reyst.rx.step.by.step.ApiInterface;
+import gsi.reyst.rx.step.by.step.rest.ApiInterface;
 import gsi.reyst.rx.step.by.step.model.Model;
 import gsi.reyst.rx.step.by.step.model.ModelImpl;
 import okhttp3.Interceptor;

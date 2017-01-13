@@ -1,4 +1,4 @@
-package gsi.reyst.rx.step.by.step;
+package gsi.reyst.rx.step.by.step.rest;
 
 import java.util.List;
 

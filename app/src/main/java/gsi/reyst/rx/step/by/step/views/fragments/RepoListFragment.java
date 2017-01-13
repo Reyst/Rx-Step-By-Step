@@ -30,7 +30,7 @@ public class RepoListFragment extends BaseFragment implements RepoListView {
     private static final String LOGGER_TAG = "L_LIST";
 
     @Inject
-    RepoListPresenter mPresenter; // = new RepoListPresenter(this);
+    RepoListPresenter mPresenter;
 
     private EditText searchEditText;
 
